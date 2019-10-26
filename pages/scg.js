@@ -1,5 +1,9 @@
+import { Button } from 'react-bootstrap'
+
 const ScgPages = () => (
-  <div>ddddd</div>
+  <div>
+    <Button>ssss</Button>
+  </div>
 )
 
 export default ScgPages
