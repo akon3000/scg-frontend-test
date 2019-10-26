@@ -1,9 +1,14 @@
+import styled from 'styled-components'
 import { Button } from 'react-bootstrap'
 
+const Wrapper = styled('div')`
+  background-color: red;
+`
+
 const ScgPages = () => (
-  <div>
+  <Wrapper>
     <Button>ssss</Button>
-  </div>
+  </Wrapper>
 )
 
 export default ScgPages
