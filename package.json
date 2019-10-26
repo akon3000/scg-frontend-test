@@ -5,6 +5,11 @@
   "repository": "git@github.com:akon3000/scg-frontend-test.git",
   "author": "ToNoey <vonmane001@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "next build",
+    "start": "node ./server",
+    "dev": "nodemon ./server"
+  },
   "dependencies": {
     "axios": "^0.19.0",
     "dotenv": "^8.2.0",
