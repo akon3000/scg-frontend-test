@@ -1,0 +1,7 @@
+export const MOBILE_S = '320px'
+export const MOBILE_M = '375px'
+export const MOBILE_L = '425px'
+export const TABLET = '768px'
+export const LAPTOP = '1024px'
+export const LAPTOP_L = '1440px'
+export const DESKTOP = '2560px'
