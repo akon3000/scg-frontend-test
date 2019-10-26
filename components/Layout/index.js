@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import { node, bool } from 'prop-types'
 import { createGlobalStyle } from 'styled-components'
 import { SECONDARY } from '../../constants/colors'
 import Body from './Body'
@@ -15,7 +16,7 @@ const GlobalCss = createGlobalStyle`
   }
 `
 
-const Layout = ({ children, noHeader }) => {
+const Layout = ({ children, noHeader, noFooter }) => {
   const headerRef = useRef(null)
   const footerRef = useRef(null)
   const [heightHeader, setHeightHeader] = useState(0)
@@ -46,9 +47,22 @@ const Layout = ({ children, noHeader }) => {
       >
         {children}
       </Body>
-      <Footer ref={footerRef} />
+      {!noFooter &&
+        <Footer ref={footerRef} />
+      }
     </>
   )
+}
+
+Layout.propTypes = {
+  children: node,
+  noHeader: bool,
+  noFooter: bool
+}
+
+Layout.defaultProps = {
+  noHeader: false,
+  noFooter: false
 }
 
 export default Layout

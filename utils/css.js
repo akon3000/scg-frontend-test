@@ -1,3 +1,4 @@
+import { keyframes } from 'styled-components'
 import * as breakPoint from '../constants/breakPoint'
 
 export const screen = {
@@ -10,3 +11,13 @@ export const screen = {
   DESKTOP: `(max-width: ${breakPoint.DESKTOP})`,
   DESKTOP_L: `(max-width: ${breakPoint.DESKTOP})`,
 }
+
+export const animationRotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`

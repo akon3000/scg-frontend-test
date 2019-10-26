@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { node, number } from 'prop-types'
 
 const Wrapper = styled('div')`
   position: relative;
@@ -17,5 +18,11 @@ const Body = ({
     {children}
   </Wrapper>
 )
+
+Body.propTypes = {
+  children: node,
+  heightHeader: number,
+  heightFooter: number
+}
 
 export default Body

@@ -10,7 +10,6 @@ class AppDocument extends Document {
     return { ...page, styleTags }
   }
 
-
   render () {
     return (
       <html>
