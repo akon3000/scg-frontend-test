@@ -79,7 +79,7 @@ class MobileMenu extends Component {
 
 const Header = forwardRef((props, ref) => (
   <Wrapper ref={ref}>
-    <Container className='d-flex align-items-center justify-content-md-center justify-content-between'>
+    <Container className='d-flex align-items-center justify-content-md-start justify-content-between'>
       <MenuLogo>
         <Link href='/scg' as='/scg'>
           <a>SCG</a>

@@ -5,3 +5,4 @@ module.exports = routes()
 // ====  ======= ===========
 .add('home', '/', '/home')
 .add('scg', '/scg', '/scg')
+.add('number-series', '/number-series', '/number-series')
