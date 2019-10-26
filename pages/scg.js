@@ -1,13 +1,12 @@
-import { useEffect } from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled('div')`
-  margin: auto;
   width: 100%;
   max-width: 600px;
-  display: flex;
-  align-items: center;
-  padding-top: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   img {
     width: 100%;
@@ -16,17 +15,10 @@ const Wrapper = styled('div')`
   }
 `
 
-const ScgPages = () => {
-
-  useEffect(() => {
-
-  }, [])
-
-  return (
-    <Wrapper>
-      <img src='/static/images/Siam_Cement_Group_Logo.png' />
-    </Wrapper>
-  )
-}
+const ScgPages = () => (
+  <Wrapper>
+    <img src='/static/images/Siam_Cement_Group_Logo.png' />
+  </Wrapper>
+)
 
 export default ScgPages

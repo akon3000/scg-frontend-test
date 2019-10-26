@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
 import { createGlobalStyle } from 'styled-components'
 import { SECONDARY } from '../../constants/colors'
+import Body from './Body'
 import Header from './Header'
+import Footer from './Footer'
 
 const GlobalCss = createGlobalStyle`
   body {
@@ -15,13 +17,18 @@ const GlobalCss = createGlobalStyle`
 
 const Layout = ({ children, noHeader }) => {
   const headerRef = useRef(null)
-  const [heightHeader, setHeightHeader] = useState(0);
+  const footerRef = useRef(null)
+  const [heightHeader, setHeightHeader] = useState(0)
+  const [heightFooter, setHeightFooter] = useState(0)
 
   useEffect(() => {
-    setHeightHeader(
-      headerRef.current === null ? 0 : headerRef.current.clientHeight
-    )
-  }, [headerRef])
+    if (headerRef.current !== null) {
+      setHeightHeader(headerRef.current.clientHeight)
+    }
+    if (footerRef.current !== null) {
+      setHeightFooter(footerRef.current.clientHeight)
+    }
+  }, [])
 
   return (
     <>
@@ -33,7 +40,13 @@ const Layout = ({ children, noHeader }) => {
           ref={headerRef}
         />
       }
-      {children}
+      <Body
+        heightHeader={heightHeader}
+        heightFooter={heightFooter}
+      >
+        {children}
+      </Body>
+      <Footer ref={footerRef} />
     </>
   )
 }
