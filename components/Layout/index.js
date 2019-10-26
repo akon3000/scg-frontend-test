@@ -18,10 +18,10 @@ const Layout = ({ children, noHeader }) => {
   const [heightHeader, setHeightHeader] = useState(0);
 
   useEffect(() => {
-    if (headerRef.current !== null) {
-      setHeightHeader(headerRef.current.clientHeight)
-    }
-  }, [])
+    setHeightHeader(
+      headerRef.current === null ? 0 : headerRef.current.clientHeight
+    )
+  }, [headerRef])
 
   return (
     <>
