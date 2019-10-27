@@ -23,7 +23,7 @@ const BangsueRestaurantsPages = () => {
 
     } catch (err) {
       setIsLoading(false)
-      alert(`Error status ${err.response.status}, ${err.response.data.message}`)
+      alert('Oops something went wrong!!')
     }
   }
 
