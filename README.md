@@ -37,3 +37,5 @@ npm run start or yarn start
 
 # Note
 
+route **/restaurants-in-bangsue** require API to find location, Please run project **scg-blackend-test**[https://github.com/akon3000/scg-backend-test].
+If you got error something went worng.
