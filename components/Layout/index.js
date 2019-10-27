@@ -29,7 +29,7 @@ const Layout = ({ children, noHeader, noFooter }) => {
     if (footerRef.current !== null) {
       setHeightFooter(footerRef.current.clientHeight)
     }
-  }, [])
+  })
 
   return (
     <>
