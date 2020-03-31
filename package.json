@@ -15,7 +15,7 @@
     "babel-plugin-styled-components": "^1.10.6",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "next": "^9.1.1",
+    "next": "^9.3.2",
     "next-routes": "^1.4.2",
     "polished": "^3.4.1",
     "prop-types": "^15.7.2",
